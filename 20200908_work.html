@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function aZone(x, y) {
+        return Math.round(Math.random() * (y - x) + x);
+      } // document.write(aZone(1, 38));
+
+      for (let i = 0; i <= 5; i++) {
+        //排除重複號碼
+        if (aZone(1, 38) === aZone(1, 38)) {
+          i--;
+        } else {
+          document.write(`A區的號碼：${aZone(1, 38)}`);
+          document.write("<br>");
+        }
+      }
+
+      document.write("<hr>");
+
+      function bZone(x, y) {
+        return Math.round(Math.random() * (y - x) + x);
+      }
+      document.write(`B區的號碼：${bZone(1, 8)}`);
+    </script>
+  </body>
+</html>
